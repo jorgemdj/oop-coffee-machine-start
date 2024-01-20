@@ -12,7 +12,8 @@ def machine():
     while machine_on:
         request = None
         while request is None:
-            order = str(input("What would you like? (espresso/latte/cappuccino): "))
+            options = data.get_items()
+            order = str(input(f"What would you like? ({options}): "))
             if order == "report" or order == "off":
                 request = order
             else:
